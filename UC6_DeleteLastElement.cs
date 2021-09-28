@@ -21,7 +21,7 @@ namespace Day14_LinkedList_Assignments
                 }
                 temp.next = node;
             }
-            Console.WriteLine("{0} inserted into the linked list", node.data);
+            Console.WriteLine("{0} inserted into the Linked list", node.data);
         }
 
         internal Node RemoveLastElement()
