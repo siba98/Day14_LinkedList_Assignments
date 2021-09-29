@@ -21,8 +21,35 @@ namespace Day14_LinkedList_Assignments
                 }
                 temp.next = node;
             }
-            Console.WriteLine("{0} inserted into the Linked list", node.data);
+            Console.WriteLine("\n{0} inserted into the Linked list", node.data);
         }
+        
+        internal bool Search(Node head, int x)
+        {
+            Node current = head; // Initialize current
+            while (current != null)
+            {
+                if (current.data == x)
+                    return true; // data found
+                current = current.next;
+            }
+            return false; // data not found
+        }
+
+        internal void InsertAfter(Node prev_node, int new_data)
+        {
+            //Check if the given Node is null
+            if (prev_node == null)
+            {
+                Console.WriteLine("The given previous node cannot be null");
+
+                return;
+            }
+            Node new_node = new Node(new_data);
+            new_node.next = prev_node.next;
+            prev_node.next = new_node;
+        }
+
         internal void Display()
         {
             Node temp = this.head;
@@ -36,48 +63,6 @@ namespace Day14_LinkedList_Assignments
                 Console.Write(temp.data + " ");
                 temp = temp.next; //temp=null
             }
-        }
-        internal Node Search(int value)
-        {
-            while (this.head != null)
-            {
-                if (this.head.data == value)
-                {
-                    return this.head;
-                }
-                this.head = this.head.next;
-            }
-            return null;
-        }
-        internal Node InsertAtParticularPosition(int position, int data)
-        {
-            if (position < 1)
-                Console.WriteLine("Invalid position");
-            if (position == 1)
-            {
-                var newNode = new Node(data);
-                newNode.next = this.head;
-                head = newNode;
-            }
-            else
-            {
-                Node temp = this.head;
-                while (position-- != 0)
-                {
-
-                    if (position == 1)
-                    {
-                        Node node = new Node(data);
-                        node.next = this.head.next;
-                        head.next = node;
-                        break;
-                    }
-                    temp = temp.next;//1000
-                }
-                if (position != 1)
-                    Console.WriteLine("Position out of range");
-            }
-            return head;
         }
     }
 }
