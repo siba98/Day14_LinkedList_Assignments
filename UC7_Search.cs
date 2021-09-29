@@ -21,7 +21,11 @@ namespace Day14_LinkedList_Assignments
                 }
                 temp.next = node;
             }
+<<<<<<< HEAD
             Console.WriteLine("\n{0} inserted into the Linked List", node.data);
+=======
+            Console.WriteLine("\n{0} inserted into the Linked list", node.data);
+>>>>>>> UC7
         }
 
         internal bool Search(Node head, int x)
