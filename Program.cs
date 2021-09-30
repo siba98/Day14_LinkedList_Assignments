@@ -144,6 +144,7 @@ namespace Day14_LinkedList_Assignments
             list10.Add(70);
             Console.WriteLine("Linked List before Sorting..");
             list10.Display();
+            list10.SortingList();
             Console.WriteLine("\nLinkedList After sorting");
             list10.Display();
 
