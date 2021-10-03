@@ -89,6 +89,7 @@ namespace Day14_LinkedList_Assignments
             UC8_InsertAtParticularPosition list8 = new UC8_InsertAtParticularPosition();
             list8.Add(56);
             list8.Add(30);
+            list8.Add(70);
             list8.Display();
             if (list8.Search(list8.head, 30))
             {
@@ -99,7 +100,7 @@ namespace Day14_LinkedList_Assignments
             }
             else
                 Console.WriteLine("Searched Value Not Found");
-            list8.Add(70);
+            
             list8.Display();
 
             #endregion
@@ -111,6 +112,7 @@ namespace Day14_LinkedList_Assignments
             UC9_Delete_ShowListSize list9 = new UC9_Delete_ShowListSize();
             list9.Add(56);
             list9.Add(30);
+	    list9.Add(70);
             list9.Display();
             if (list9.Search(list9.head, 30))
             {
@@ -123,9 +125,6 @@ namespace Day14_LinkedList_Assignments
             {
                 Console.WriteLine("Searched Value Not Found");
             }
-
-            list9.Add(70);
-            list9.Display();
             list9.DeleteNode(40);
             Console.WriteLine("\n40 Again Removed from List");
             list9.Display();
